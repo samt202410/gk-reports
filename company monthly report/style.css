@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-text: #333;
+  --color-primary: #6a59cc;
+  --color-accent: #289ea7;
+  --color-primary-bg: #eae8f8;
+  --color-primary-bg-faded: #eae8f85e;
+  --color-accent-bg-faded: #80d0d629;
+  --color-border: #e5e5e5;
+  --table-border-radius: 8px;
+}
+
+html {
+  font-family: "proxima-nova";
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  color: var(--color-text);
+  width: 595px;
+  height: 842px;
+  border: 1px solid #e8e8e8;
+  position: relative;
+}
+
+.section-header {
+  font-size: 12px;
+  line-height: 15px;
+  padding-bottom: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-primary);
+  border-bottom: 2px solid currentColor;
+}
+
+/* ***************************************************
+   *    TABLE 
+   *************************************************** */
+
+.monthly-report-table {
+  border-collapse: collapse;
+  border-radius: 8px;
+  width: 306px;
+}
+
+.monthly-report-table th {
+  background: var(--color-text);
+  color: white;
+  font-size: 11px;
+  line-height: 17px;
+  font-weight: 600;
+  padding: 6px 10px;
+  text-align: left;
+}
+
+.monthly-report-table th:first-child {
+  width: 61.5%;
+}
+
+.monthly-report-table td {
+  padding: 6px 10px;
+  font-size: 10px;
+  line-height: 15px;
+  background-color: white;
+}
+
+.monthly-report-table__label div {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.monthly-report-table__label-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: var(--color-text);
+}
+
+.monthly-report-table__data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.monthly-report-table__data-sub {
+  font-size: 6px;
+  line-height: 9px;
+}
+
+.monthly-report-table tr:first-child th:first-child,
+.monthly-report-table tr:first-child td:first-child {
+  border-top-left-radius: var(--table-border-radius);
+}
+
+.monthly-report-table tr:first-child th:last-child,
+.monthly-report-table tr:first-child td:last-child {
+  border-top-right-radius: var(--table-border-radius);
+}
+
+.monthly-report-table tr:last-child th:first-child,
+.monthly-report-table tr:last-child td:first-child {
+  border-bottom-left-radius: var(--table-border-radius);
+}
+
+.monthly-report-table tr:last-child th:last-child,
+.monthly-report-table tr:last-child td:last-child {
+  border-bottom-right-radius: var(--table-border-radius);
+}
+
+/* ***************************************************
+   *    HEADER 
+   *************************************************** */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  padding-bottom: 16px;
+  width: 100%;
+  border-bottom: 4px solid var(--color-primary);
+}
+
+.header__title {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.header__title--report {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.header__title--company {
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.header__logo {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.header__logo--date {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+/* ***************************************************
+   *    Overview 
+   *************************************************** */
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.overview__cards {
+  background: var(--color-primary-bg);
+  padding: 14px 10px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+}
+
+.overview__card {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 10px;
+  gap: 8px;
+  background: white;
+  border-radius: 4px;
+}
+
+.overview__card-title {
+  font-size: 10.5px;
+  line-height: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.overview__card-data {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+/* ***************************************************
+   *    CLAIMS 
+   *************************************************** */
+
+.claims {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.claims-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ***************************************************
+   *    CLAIMS BY CATEGORIES 
+   *************************************************** */
+
+.claim-by-category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  border-radius: 8px;
+  padding: 10px 6px;
+  background: var(--color-primary-bg-faded);
+}
+
+.claim-by-category-table th {
+  background-color: var(--color-primary);
+}
+
+.claim-by-category-table tr:nth-child(2) .monthly-report-table__label-dot {
+  background-color: #5e3fbe;
+}
+
+.claim-by-category-table tr:nth-child(3) .monthly-report-table__label-dot {
+  background-color: #a88deb;
+}
+
+.claim-by-category-table tr:nth-child(4) .monthly-report-table__label-dot {
+  background-color: #cbb6f8;
+}
+
+.claim-by-category-table tr:nth-child(5) .monthly-report-table__label-dot {
+  background-color: #f4f0fd;
+}
+
+.claim-by-category-table tr:nth-child(6) .monthly-report-table__label-dot {
+  background-color: #e5dafb;
+}
+
+/* ***************************************************
+   *    CLAIMS BY DESIGNATIONS 
+   *************************************************** */
+
+.claim-by-designation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  border-radius: 8px;
+  padding: 10px 6px;
+  background: var(--color-accent-bg-faded);
+}
+
+.claim-by-designation-table th {
+  background-color: var(--color-accent);
+}
+
+.claim-by-designation-table tr:nth-child(2) .monthly-report-table__label-dot {
+  background-color: #16585d;
+}
+
+.claim-by-designation-table tr:nth-child(3) .monthly-report-table__label-dot {
+  background-color: #289ea7;
+}
+
+.claim-by-designation-table tr:nth-child(4) .monthly-report-table__label-dot {
+  background-color: #80d0d6;
+}
+
+.claim-by-designation-table tr:nth-child(5) .monthly-report-table__label-dot {
+  background-color: #eaf7f8;
+}
+
+.claim-by-designation-table tr:nth-child(6) .monthly-report-table__label-dot {
+  background-color: #c0e7ea;
+}
+
+/* ***************************************************
+   *    REPORT GENERATED AT 
+   *************************************************** */
+
+.generated-at {
+  position: absolute;
+  bottom: 20px;
+  font-size: 6.5px;
+  right: 20px;
+}
