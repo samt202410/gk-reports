@@ -25,9 +25,13 @@ body {
   flex-direction: column;
   gap: 3.025vw;
   color: var(--color-text);
-  padding-bottom: 0;
+  /* padding-bottom: 0; */
   position: relative;
 }
+
+/* ***************************************************
+   *    HEADERS 
+   *************************************************** */
 
 .section-header {
   font-size: 2.017vw;
@@ -37,6 +41,32 @@ body {
   font-weight: 700;
   color: var(--color-primary);
   border-bottom: 0.336vw solid currentColor;
+}
+
+.sub-section-header {
+  display: flex;
+  align-items: center;
+  gap: 1.008vw;
+
+  font-size: 2.017vw;
+  line-height: 1.25;
+  padding-bottom: 0.672vw;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.sub-section-heade__separator {
+  height: 0.336vw;
+  flex: 1;
+  background: currentColor;
+}
+
+.sub-section-header__details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.168vw;
+  font-size: 1.008vw;
 }
 
 /* ***************************************************
@@ -56,11 +86,12 @@ body {
   line-height: 1.54;
   font-weight: 600;
   padding: 1.008vw 1.681vw;
-  text-align: left;
+  text-align: center;
 }
 
 .monthly-report-table th:first-child {
   width: 61.5%;
+  text-align: left;
 }
 
 .monthly-report-table td {
@@ -215,14 +246,18 @@ body {
 }
 
 /* ***************************************************
-   *    CLAIMS 
+   *    HEADING DATA CONTAINER 
    *************************************************** */
 
-.claims {
+.heading-data-container {
   display: flex;
   flex-direction: column;
   gap: 1.681vw;
 }
+
+/* ***************************************************
+   *    CLAIMS 
+   *************************************************** */
 
 .claims-section {
   display: flex;
@@ -304,6 +339,48 @@ body {
 
 .claim-by-designation-table tr:nth-child(6) .monthly-report-table__label-dot {
   background-color: #c0e7ea;
+}
+
+/* ***************************************************
+   *    ALLOWANCES 
+   *************************************************** */
+
+.allowances-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6.723vw;
+  border-radius: 1.345vw;
+  padding: 5.378vw 1.008vw;
+  background: var(--color-primary-bg-faded);
+}
+
+.all-allowances .monthly-report-table th {
+  background-color: var(--color-primary);
+}
+
+.all-allowances .monthly-report-table th:first-child {
+  min-width: 16.807vw;
+}
+
+/* ***************************************************
+   *    ALLOWANCE DETAILS 
+   *************************************************** */
+
+.allowance-details-section {
+  display: flex;
+  align-items: center;
+  padding: 2.017vw 1.008vw;
+  border-radius: 1.345vw;
+  background: var(--color-primary-bg-faded);
+}
+
+.allowance-table .monthly-report-table {
+  width: 100%;
+}
+
+.allowance-table .monthly-report-table th {
+  background-color: var(--color-primary);
 }
 
 /* ***************************************************
